@@ -1,0 +1,48 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version'5.1.0'
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+
+    group 'fr.il_totore'
+    version '1.0-SNAPSHOT'
+
+    project.targetCompatibility = 1.8
+    project.sourceCompatibility = 1.8
+
+    compileJava {
+        targetCompatibility = 1.8
+        sourceCompatibility = 1.8
+    }
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot:1.14.3-R0.1-SNAPSHOT'
+
+    compile project(nms('1_8_R3'))
+    compile project(nms('1_9_R1'))
+    compile project(nms('1_9_R2'))
+    compile project(nms('1_10_R1'))
+    compile project(nms('1_11_R1'))
+    compile project(nms('1_12_R1'))
+    compile project(nms('1_13_R1'))
+    compile project(nms('1_13_R2'))
+    compile project(nms('1_14_R1'))
+
+    compile project(':EntityMetadataAPI')
+}
+
+static String nms(String version) {
+    return ':EntityMetadataVersion:EntityMetadataV' + version
+}
+
+shadowJar {
+    configurations = [project.configurations.compile]
+}
