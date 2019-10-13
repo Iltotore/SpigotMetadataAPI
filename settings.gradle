@@ -1,5 +1,8 @@
 rootProject.name='EntityMetadata'
-include 'EntityMetadataAPI', 'EntityMetadataVersion',
+include 'EntityMetadataAPI',
+        'EntityMetadataAPI:Core',
+        'EntityMetadataAPI:Abstract',
+        'EntityMetadataVersion',
 //Versions
 nms('1_8_R3'),
 nms('1_9_R1'),

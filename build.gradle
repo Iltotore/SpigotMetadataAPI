@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.johnrengelman.shadow' version'5.1.0'
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
 }
 
 allprojects {
@@ -21,10 +21,10 @@ allprojects {
         mavenCentral()
         mavenLocal()
     }
+
 }
 
 dependencies {
-    compileOnly 'org.spigotmc:spigot:1.14.3-R0.1-SNAPSHOT'
 
     compile project(nms('1_8_R3'))
     compile project(nms('1_9_R1'))
@@ -36,7 +36,8 @@ dependencies {
     compile project(nms('1_13_R2'))
     compile project(nms('1_14_R1'))
 
-    compile project(':EntityMetadataAPI')
+    compile project(':EntityMetadataAPI:Abstract')
+    compile project(':EntityMetadataAPI:Core')
 }
 
 static String nms(String version) {
@@ -45,4 +46,17 @@ static String nms(String version) {
 
 shadowJar {
     configurations = [project.configurations.compile]
+}
+
+def exportedProjects = [
+        ':EntityMetadataAPI:Core',
+        ':EntityMetadataAPI:Abstract'
+]
+
+task allJavadocs(){
+    task alljavadoc(type: Javadoc) {
+        source exportedProjects.collect { name -> project(name).sourceSets.main.allJava }
+        classpath = files(exportedProjects.collect { name -> project(name).sourceSets.main.compileClasspath })
+        destinationDir = file("${buildDir}/docs/javadoc")
+    }
 }
