@@ -15,44 +15,35 @@ public class DataWatcherKey<T> {
     private String key;
 
     /**
-     *
-     * @param key
+     * Create a new DataWatcherKey with a key
+     * @param key the key of this {@link DataWatcherKey}. Note this key must be unique
      */
     public DataWatcherKey(String key){
         this.key = key;
     }
 
     /**
-     *
-     * @param clazz
+     * Create a new DataWatcherKey with the class's name
+     * @param clazz the given class
      */
     public DataWatcherKey(Class<T> clazz){
         this(clazz.getName());
     }
 
     /**
-     *
-     * @return
+     * Get the key.
+     * @return the {@link DataWatcherKey}'s key
      */
     public String getKey(){
         return key;
     }
 
-    /**
-     *
-     * @param obj
-     * @return
-     */
     @Override
     public boolean equals(Object obj){
         if(!(obj instanceof DataWatcherKey)) return false;
         return key.equals(((DataWatcherKey) obj).getKey());
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public int hashCode(){
         return key.hashCode();

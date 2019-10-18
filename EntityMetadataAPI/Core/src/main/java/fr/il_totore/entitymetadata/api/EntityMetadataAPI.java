@@ -11,6 +11,11 @@ public class EntityMetadataAPI {
     private static VersionEntityMetadataAPI api;
     private static TreeMap<ServerVersion, Supplier<VersionEntityMetadataAPI>> versions = new TreeMap<>(ServerVersion::compareTo);
 
+    /**
+     * Get the {@link VersionEntityMetadataAPI} instance.
+     *
+     * @return the {@link VersionEntityMetadataAPI} instance for the server's version
+     */
     public static VersionEntityMetadataAPI getAPI(){
         if(api == null){
             ServerVersion version = ServerVersion.fromServer(Bukkit.getServer());

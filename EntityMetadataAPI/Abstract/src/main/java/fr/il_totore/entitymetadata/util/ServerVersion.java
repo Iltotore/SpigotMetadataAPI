@@ -6,6 +6,11 @@ public class ServerVersion implements Comparable<ServerVersion> {
 
     private String nmsVersion;
 
+    /**
+     * Create a new {@link ServerVersion} with the given NMS version
+     *
+     * @param nmsVersion the given NMS version with this pattern: 1_version_RreleaseVersion
+     */
     public ServerVersion(String nmsVersion){
         this.nmsVersion = nmsVersion;
     }
@@ -30,10 +35,19 @@ public class ServerVersion implements Comparable<ServerVersion> {
         return doubleValue().hashCode();
     }
 
+    /**
+     * Get the NMS version as Double
+     * @return the NMS version with this pattern: 1.version and release version. Example: 1_14_R1 → 1.141
+     */
     public Double doubleValue(){
         return Double.parseDouble(nmsVersion.replaceFirst("_", ".").replace("_R", "").substring(1));
     }
 
+    /**
+     * Get the {@link ServerVersion} from the Bukkit server
+     * @param server the server instance
+     * @return the {@link ServerVersion} created from the server's NMS version
+     */
     public static ServerVersion fromServer(Server server){
         return new ServerVersion(server.getClass().getPackage().getName().split("\\.")[3]);
     }

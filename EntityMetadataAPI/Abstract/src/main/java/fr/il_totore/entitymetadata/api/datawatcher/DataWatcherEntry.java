@@ -42,8 +42,8 @@ public class DataWatcherEntry {
 
     /**
      * Check if a {@link VersionEntry} exists for this {@link ServerVersion}
-     * @param version
-     * @return
+     * @param version the given {@link ServerVersion}
+     * @return true if a {@link VersionEntry} with this version exists
      */
     public boolean hasVersion(ServerVersion version){
         return getVersion(version) != null;

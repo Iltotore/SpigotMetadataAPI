@@ -22,10 +22,6 @@ public class NBTTagType<T extends NBTBase> {
         return id;
     }
 
-    /**
-     * {@inheritDoc}
-     * @return
-     */
     @Override
     public int hashCode(){
         return id;
@@ -33,17 +29,14 @@ public class NBTTagType<T extends NBTBase> {
 
     /**
      * Get the NBTTagType from it's id.
-     * @param id
-     * @return
+     * @param id the {@link NBTTagType}'s NMS id
+     * @return the {@link NBTTagType} with the same id as the given one
      */
     public static NBTTagType getById(int id){
         for(NBTTagType type : values()) if(type.getId() == id) return type;
         return null;
     }
 
-    /**
-     * @see Enum
-     */
     public static NBTTagType[] values(){
         return values.toArray(new NBTTagType[]{});
     }

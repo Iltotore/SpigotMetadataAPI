@@ -147,6 +147,7 @@ public interface NBTTagCompound extends NBTBase {
     /**
      * Get the value associated to the given key
      * @param key the given key as {@link String}
+     * @param type the {@link NBTTagType} of the {@link NBTTagList}
      * @return the value associated to the given key
      */
     NBTTagList getList(String key, NBTTagType type);
@@ -167,7 +168,7 @@ public interface NBTTagCompound extends NBTBase {
     /**
      * return the {@link NBTTagType} of the value associated to the given key
      * @param key the key of the value
-     * @return
+     * @return the {@link NBTTagType} of the value at the given key
      */
     NBTTagType getTypeOf(String key);
 
