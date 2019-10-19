@@ -29,4 +29,4 @@ Now you can use [DataWatcher#set(DataWatcherObject<F, T>, F)](https://iltotore.g
 dataWatcher.set(dataObject, new Vector(0, 0, 0);
 ```
 
-Index can change between versions. You can use [**DataWatcherEntry**](datawatcher-entry.md) to support multiples versions
+Index can change between versions. You can use [**DataWatcherEntry**](datawatcher-entry) to support multiples versions

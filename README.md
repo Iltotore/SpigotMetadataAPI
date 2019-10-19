@@ -48,5 +48,5 @@ dependencies {
 
 ## Usage
 - [**Javadoc**](https://iltotore.github.io/EntityMetadataAPI/javadoc/)
-- [**DataWatcher usage**](https://iltotore.github.io/EntityMetadataAPI/datawatcher.md)
-- [**NBT usage**](https://iltotore.github.io/EntityMetadataAPI/nbt.md)
+- [**DataWatcher usage**](https://iltotore.github.io/EntityMetadataAPI/datawatcher)
+- [**NBT usage**](https://iltotore.github.io/EntityMetadataAPI/nbt)
