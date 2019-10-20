@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Salut mon paute</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=style.css>
+</head>
+<body>
+<div id='content'>
+    <h1 id="nbt">NBT</h1>
+    <p>You can edit entities's NBT tags with this library.<br/>
+        Firstly, you need to get the entity's <a
+                href="https://iltotore.github.io/EntityMetadataAPI/javadoc/fr/il_totore/entitymetadata/api/nbt/NBTTagCompound.html">NBTTagCompound</a>
+        by using <a
+                href="https://iltotore.github.io/EntityMetadataAPI/javadoc/fr/il_totore/entitymetadata/api/MetadataUtil.html#getNBTTag-org.bukkit.entity.Entity-">MetadataUtil#getNBTTag(Entity)</a>.
+    </p>
+    <pre><code class="java language-java">MetadataUtil metadataUtil = EntityMetadataAPI.getAPI().getMetadataUtil();
+NBTTagCompound nbtTag = metadataUtil.getNBTTag(entity);
+</code></pre>
+    <p>Now you can edit the entity's <a
+            href="https://iltotore.github.io/EntityMetadataAPI/javadoc/fr/il_totore/entitymetadata/api/nbt/NBTTagCompound.html">NBTTagCompound</a>.
+    </p>
+    <pre><code class="java language-java">nbtTag.setInt("Fire", 100); //Ignites the entity for 100 ticks (5 seconds)
+</code></pre>
+    <p>Now, you need to update the entity's tags.</p>
+    <pre><code class="java language-java">metadataUtil.setNBTTag(entity, nbtTag);
+</code></pre>
+</div>
