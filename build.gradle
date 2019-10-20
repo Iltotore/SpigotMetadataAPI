@@ -1,16 +1,7 @@
-buildscript {
-    repositories {
-        jcenter()
-        maven { url 'http://dl.bintray.com/content/aalmiray/kordamp' }
-    }
-    dependencies {
-        classpath 'org.kordamp:markdown-gradle-plugin:1.2.0'
-    }
-}
+import fr.il_totore.task.MarkdownToHtml
 
 plugins {
     id 'com.github.johnrengelman.shadow' version '5.1.0'
-    id 'org.kordamp.markdown.convert' version '1.2.0'
 }
 
 allprojects {
@@ -68,10 +59,9 @@ task alljavadoc(type: Javadoc) {
     source exportedProjects.collect { name -> project(name).sourceSets.main.allJava }
     classpath = files(exportedProjects.collect { name -> project(name).sourceSets.main.compileClasspath })
     destinationDir = file("${buildDir}/docs/javadoc")
-    finalizedBy htmlToMarkdown
 }
 
-htmlToMarkdown {
-    sourceDir = file("${buildDir}/docs/")
-    outputDir = file("${buildDir}/markdownDocs/")
+task markdown(type: MarkdownToHtml){
+    inputDir = file('markdown/')
+    outputDir = file('docs/')
 }
