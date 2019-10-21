@@ -3,7 +3,6 @@ let showdown = require("showdown");
 exports.fs = require("fs");
 
 exports.convertToMarkdown = function convertToMarkdown(input, output, style, title) {
-    exports.fs.readFile(style, function(err, styleData) {
         exports.fs.readFile(input, function(err, data) {
             if(err) {
                 throw err;
@@ -39,5 +38,4 @@ exports.convertToMarkdown = function convertToMarkdown(input, output, style, tit
                 }
             });
         });
-    });
 };

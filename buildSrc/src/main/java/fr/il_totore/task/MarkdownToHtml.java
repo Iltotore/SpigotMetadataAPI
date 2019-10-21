@@ -12,6 +12,7 @@ public class MarkdownToHtml extends DefaultTask {
     public File outputDir = null;
     public File scriptDir = new File(getProject().getRootDir(), "scripts/markdown/");
     public File style = new File(getProject().getRootDir(), "markdown/style.css");
+    public String titlePattern = "\"# ${title}\"";
     public boolean override = true;
 
     @TaskAction
@@ -27,7 +28,7 @@ public class MarkdownToHtml extends DefaultTask {
         if(!convertDirJs.exists()) throw new FileNotFoundException(convertDirJs.getAbsolutePath());
         System.out.println("Running " + convertDirJs.getAbsolutePath());
         try {
-            String command = "node " + convertDirJs.getAbsolutePath() + " " + inputDir.getAbsolutePath() + " " + outputDir.getAbsolutePath() + " " + style.getAbsolutePath();
+            String command = "node " + convertDirJs.getAbsolutePath() + " " + inputDir.getAbsolutePath() + " " + outputDir.getAbsolutePath() + " " + style.getAbsolutePath() + " " + titlePattern;
             System.out.println("Running: " + command);
             Process process = Runtime.getRuntime().exec(command);
             StreamPrinter inputPrinter = new StreamPrinter(process.getInputStream(), System.out);
