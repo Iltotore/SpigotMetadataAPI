@@ -49,11 +49,9 @@ a {
     color: #0366d6;
     text-decoration: none;
 }
-
 a:visited {
     color: #0366d6;
 }
-
 a:hover {
     color: #0366d6;
     text-decoration: underline;
@@ -111,7 +109,6 @@ blockquote {
     letter-spacing: -1px;
     font-style: italic;
 }
-
 blockquote * {
     font-style: normal !important;
     letter-spacing: 0;
