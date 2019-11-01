@@ -10,23 +10,21 @@ This library can be added to your buildpath locally using your IDE (Eclipse: Jav
 
 You can also use Maven or Gradle to add this library.
 
-[Jitpack](https://jitpack.io/#Iltotore/EntityMetadataAPI) will be used in these examples.
-
 Maven:
 - Repository:
 ```xml
 <repositories>
 	<repository>
-		<id>jitpack.io</id>
-		<url>https://jitpack.io</url>
+		<id>il_totore</id>
+		<url>https://raw.githubusercontent.com/Iltotore/maven/master/</url>
 	</repository>
 </repositories>
 ```
 - Dependency:
 ```xml
 <dependency>
-	<groupId>com.github.Iltotore</groupId>
-	<artifactId>EntityMetdataAPI</artifactId>
+	<groupId>fr.il_totore</groupId>
+	<artifactId>entitymetadatapi</artifactId>
 	<version>Tag</version>
 </dependency>
 ```
@@ -36,13 +34,13 @@ Gradle:
 ```groovy
 repositories {
 	...
-	maven { url 'https://jitpack.io' }
+	maven { url 'https://raw.githubusercontent.com/Iltotore/maven/master' }
 }
 ```
 - Dependency
 ```groovy
 dependencies {
-	implementation 'com.github.Iltotore:EntityMetadataAPI:Tag'
+	implementation 'fr.il_totore:entitymetadataapi:Tag'
 }
 ```
 

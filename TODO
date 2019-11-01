@@ -1,0 +1,2 @@
+- Add Json support for NBT tags
+- Add NBTTagCompound method to create an empty one.
