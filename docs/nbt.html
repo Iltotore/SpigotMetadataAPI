@@ -13,8 +13,8 @@
         by using <a
                 href="https://iltotore.github.io/EntityMetadataAPI/javadoc/fr/il_totore/entitymetadata/api/MetadataUtil.html#getNBTTag-org.bukkit.entity.Entity-">MetadataUtil#getNBTTag(Entity)</a>.
     </p>
-    <pre><code class="java language-java">MetadataUtil metadataUtil = EntityMetadataAPI.getAPI().getMetadataUtil();
-NBTTagCompound nbtTag = metadataUtil.getNBTTag(entity);
+    <pre><code class="java language-java">NBTManager nbtManager = EntityMetadataAPI.getAPI().getNBTManager();
+NBTTagCompound nbtTag = nbtManager.getNBTTag(entity);
 </code></pre>
     <p>Now you can edit the entity's <a
             href="https://iltotore.github.io/EntityMetadataAPI/javadoc/fr/il_totore/entitymetadata/api/nbt/NBTTagCompound.html">NBTTagCompound</a>.

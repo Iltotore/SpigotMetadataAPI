@@ -150,4 +150,14 @@ public class NBTTagCompound extends NBTBase<net.minecraft.server.v1_13_R1.NBTTag
         return getHandle().hasKeyOfType(key, type.getId());
     }
 
+    @Override
+    public NBTTagCompound merge(fr.il_totore.entitymetadata.api.nbt.NBTTagCompound nbtTagCompound) {
+        getHandle().a(((NBTTagCompound) nbtTagCompound).getHandle());
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return getHandle().toString();
+    }
 }

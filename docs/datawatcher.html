@@ -11,9 +11,9 @@
     <p>Firstly, you need to get the entity's <a
             href="https://iltotore.github.io/EntityMetadataAPI/javadoc/fr/il_totore/entitymetadata/api/datawatcher/DataWatcher.html">DataWatcher</a>.
     </p>
-    <pre><code class="java language-java">MetadataUtil metadataUtil = EntityMetadataAPI.getAPI().getMetadataUtil();
+    <pre><code class="java language-java">MetadataUtil dataManager = EntityMetadataAPI.getAPI().getDataWatcherManager();
 //An EnderCrystal will be used for this example
-DataWatcher dataWatcher = metadataUtil.getDataWatcher(enderCrystal);
+DataWatcher dataWatcher = dataManager.getDataWatcher(enderCrystal);
 </code></pre>
     <p>Secondly, you need to get the <a
             href="https://iltotore.github.io/EntityMetadataAPI/javadoc/fr/il_totore/entitymetadata/api/datawatcher/DataWatcherObject.html">DataWatcherObject</a>
