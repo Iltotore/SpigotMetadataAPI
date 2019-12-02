@@ -35,4 +35,5 @@ public interface VersionEntityMetadataAPI {
      * @return the {@link NBTManager} instance of this {@link VersionEntityMetadataAPI}
      */
     DataWatcherManager getDataWatcherManager();
+
 }
