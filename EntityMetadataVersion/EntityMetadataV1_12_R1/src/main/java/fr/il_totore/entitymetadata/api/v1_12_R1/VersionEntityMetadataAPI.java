@@ -1,9 +1,11 @@
 package fr.il_totore.entitymetadata.api.v1_12_R1;
 
 import fr.il_totore.entitymetadata.api.datawatcher.DataWatcherKey;
+import fr.il_totore.entitymetadata.api.v1_12_R1.datawatcher.DataWatcherManager;
 import fr.il_totore.entitymetadata.api.v1_12_R1.datawatcher.DataWatcherRegistry;
 import fr.il_totore.entitymetadata.api.v1_12_R1.datawatcher.DataWatcherSerializer;
 import fr.il_totore.entitymetadata.api.v1_12_R1.datawatcher.SimpleDataWatcherSerializer;
+import fr.il_totore.entitymetadata.api.v1_12_R1.nbt.NBTManager;
 import fr.il_totore.entitymetadata.api.v1_12_R1.nbt.NBTTagCompound;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.chat.ComponentSerializer;
@@ -19,6 +21,8 @@ public class VersionEntityMetadataAPI implements fr.il_totore.entitymetadata.api
 
     private DataWatcherRegistry dataWatcherRegistry = new DataWatcherRegistry();
     private MetadataUtil metadataUtil = new MetadataUtil();
+    private NBTManager nbtManager = new NBTManager();
+    private DataWatcherManager dataWatcherManager = new DataWatcherManager();
 
     {
         dataWatcherRegistry.registerSerializer(DataWatcherKey.BOOLEAN, new SimpleDataWatcherSerializer<>(net.minecraft.server.v1_12_R1.DataWatcherRegistry.h));
@@ -37,12 +41,24 @@ public class VersionEntityMetadataAPI implements fr.il_totore.entitymetadata.api
         dataWatcherRegistry.registerSerializer(DataWatcherKey.NBT_TAG, new DataWatcherSerializer<>(net.minecraft.server.v1_12_R1.DataWatcherRegistry.n, bukkit -> ((NBTTagCompound) bukkit).getHandle(), NBTTagCompound::new));
     }
 
+    @Override
     public DataWatcherRegistry getDataWatcherRegistry(){
         return dataWatcherRegistry;
     }
 
     @Override
+    @Deprecated
     public MetadataUtil getMetadataUtil(){
         return metadataUtil;
+    }
+
+    @Override
+    public NBTManager getNBTManager() {
+        return nbtManager;
+    }
+
+    @Override
+    public DataWatcherManager getDataWatcherManager() {
+        return dataWatcherManager;
     }
 }

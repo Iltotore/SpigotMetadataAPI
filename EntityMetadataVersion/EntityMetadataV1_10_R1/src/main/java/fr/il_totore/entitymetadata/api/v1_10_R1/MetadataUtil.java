@@ -13,6 +13,7 @@ import org.bukkit.entity.Player;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
+@Deprecated
 public class MetadataUtil implements fr.il_totore.entitymetadata.api.MetadataUtil {
 
     private static Constructor<net.minecraft.server.v1_10_R1.NBTTagEnd> nbtTagEndConstructor;

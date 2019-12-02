@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="EntityMetadata.buildSrc.main" target="1.8" />
+      <module name="EntityMetadata.buildSrc.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataAPI.Abstract.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataAPI.Abstract.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataAPI.Core.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataAPI.Core.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataAPI.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataAPI.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataPlugin.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataPlugin.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_10_R1.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_10_R1.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_11_R1.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_11_R1.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_12_R1.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_12_R1.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_13_R1.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_13_R1.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_13_R2.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_13_R2.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_14_R1.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_14_R1.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_8_R3.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_8_R3.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_9_R1.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_9_R1.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_9_R2.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.EntityMetadataV1_9_R2.test" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.main" target="1.8" />
+      <module name="EntityMetadata.EntityMetadataVersion.test" target="1.8" />
+      <module name="EntityMetadata.main" target="1.8" />
+      <module name="EntityMetadata.test" target="1.8" />
+      <module name="EntityMetadataPlugin.buildSrc.main" target="1.8" />
+      <module name="EntityMetadataPlugin.buildSrc.test" target="1.8" />
+      <module name="EntityMetadataPlugin.main" target="1.8" />
+      <module name="EntityMetadataPlugin.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

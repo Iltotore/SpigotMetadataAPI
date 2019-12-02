@@ -1,9 +1,11 @@
 package fr.il_totore.entitymetadata.api.v1_11_R1;
 
 import fr.il_totore.entitymetadata.api.datawatcher.DataWatcherKey;
+import fr.il_totore.entitymetadata.api.v1_11_R1.datawatcher.DataWatcherManager;
 import fr.il_totore.entitymetadata.api.v1_11_R1.datawatcher.DataWatcherRegistry;
 import fr.il_totore.entitymetadata.api.v1_11_R1.datawatcher.DataWatcherSerializer;
 import fr.il_totore.entitymetadata.api.v1_11_R1.datawatcher.SimpleDataWatcherSerializer;
+import fr.il_totore.entitymetadata.api.v1_11_R1.nbt.NBTManager;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.chat.ComponentSerializer;
 import net.minecraft.server.v1_11_R1.BlockPosition;
@@ -18,7 +20,8 @@ public class VersionEntityMetadataAPI implements fr.il_totore.entitymetadata.api
 
     private DataWatcherRegistry dataWatcherRegistry = new DataWatcherRegistry();
     private MetadataUtil metadataUtil = new MetadataUtil();
-
+    private NBTManager nbtManager = new NBTManager();
+    private DataWatcherManager dataWatcherManager = new DataWatcherManager();
 
     {
         dataWatcherRegistry.registerSerializer(DataWatcherKey.BOOLEAN, new SimpleDataWatcherSerializer<>(net.minecraft.server.v1_11_R1.DataWatcherRegistry.h));
@@ -36,12 +39,24 @@ public class VersionEntityMetadataAPI implements fr.il_totore.entitymetadata.api
         dataWatcherRegistry.registerSerializer(DataWatcherKey.OPTIONAL_ITEM_STACK, DataWatcherSerializer.optionalRawOf(net.minecraft.server.v1_11_R1.DataWatcherRegistry.f, CraftItemStack::asNMSCopy, CraftItemStack::asBukkitCopy));
     }
 
+    @Override
     public DataWatcherRegistry getDataWatcherRegistry(){
         return dataWatcherRegistry;
     }
 
     @Override
+    @Deprecated
     public MetadataUtil getMetadataUtil(){
         return metadataUtil;
+    }
+
+    @Override
+    public fr.il_totore.entitymetadata.api.nbt.NBTManager getNBTManager() {
+        return nbtManager;
+    }
+
+    @Override
+    public DataWatcherManager getDataWatcherManager() {
+        return dataWatcherManager;
     }
 }

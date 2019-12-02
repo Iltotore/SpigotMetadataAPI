@@ -1,13 +1,17 @@
 package fr.il_totore.entitymetadata.api.v1_8_R3;
 
 import fr.il_totore.entitymetadata.api.datawatcher.DataWatcherKey;
+import fr.il_totore.entitymetadata.api.v1_8_R3.datawatcher.DataWatcherManager;
 import fr.il_totore.entitymetadata.api.v1_8_R3.datawatcher.DataWatcherRegistry;
 import fr.il_totore.entitymetadata.api.v1_8_R3.datawatcher.DataWatcherSerializer;
+import fr.il_totore.entitymetadata.api.v1_8_R3.nbt.NBTManager;
 
 public class VersionEntityMetadataAPI implements fr.il_totore.entitymetadata.api.VersionEntityMetadataAPI {
 
     private DataWatcherRegistry dataWatcherRegistry;
     private MetadataUtil metadataUtil = new MetadataUtil();
+    private NBTManager nbtManager = new NBTManager();
+    private DataWatcherManager dataWatcherManager = new DataWatcherManager();
 
     {
         dataWatcherRegistry = new DataWatcherRegistry();
@@ -25,7 +29,18 @@ public class VersionEntityMetadataAPI implements fr.il_totore.entitymetadata.api
     }
 
     @Override
+    @Deprecated
     public MetadataUtil getMetadataUtil(){
         return metadataUtil;
+    }
+
+    @Override
+    public NBTManager getNBTManager() {
+        return nbtManager;
+    }
+
+    @Override
+    public DataWatcherManager getDataWatcherManager() {
+        return dataWatcherManager;
     }
 }

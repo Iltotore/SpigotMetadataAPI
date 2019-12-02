@@ -1,0 +1,45 @@
+import fr.il_totore.task.spigot.SpigotClearPluginsTask
+import fr.il_totore.task.util.PlaceholderTask
+
+plugins {
+    id 'java'
+    id 'maven'
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
+}
+
+project.version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    maven { url 'https://raw.githubusercontent.com/Iltotore/maven/master/'}
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot:1.14.4-R0.1-SNAPSHOT'
+    compile 'fr.il_totore:entitymetadataapi:2.0-SNAPSHOT'
+    //compile files('../build/libs/EntityMetadata-1.0-SNAPSHOT-all.jar')
+}
+
+File pluginDirectory = new File("C:/Users/rapha/IdeaProjects/SpigotTest/plugins")
+
+task copyPlugin(type: Copy) {
+    from new File(libsDir, 'EntityMetadataPlugin-' + version + '-all.jar')
+    into pluginDirectory
+}
+
+task clearPlugins(type: SpigotClearPluginsTask) {
+    pluginDir = pluginDirectory
+    whitelist = ['Debugger.jar', 'PlugMan.jar', 'ViaVersion.jar', 'WorldEdit.jar', 'ParticleAPI.jar']
+    finalizedBy copyPlugin
+}
+
+task placeholder(type: PlaceholderTask) {
+    map = ['version': project.version]
+    files = new File(buildDir, "resources/").listFiles()
+}
+
+shadowJar {
+    configurations = [project.configurations.compile]
+    dependsOn placeholder
+    finalizedBy clearPlugins
+}

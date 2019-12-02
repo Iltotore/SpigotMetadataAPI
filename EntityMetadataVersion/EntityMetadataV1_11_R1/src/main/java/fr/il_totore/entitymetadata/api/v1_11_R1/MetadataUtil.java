@@ -1,10 +1,9 @@
 package fr.il_totore.entitymetadata.api.v1_11_R1;
 
 import fr.il_totore.entitymetadata.api.nbt.NBTBase;
+import fr.il_totore.entitymetadata.api.nbt.NBTTagCompound;
 import fr.il_totore.entitymetadata.api.nbt.NBTTagType;
 import fr.il_totore.entitymetadata.api.v1_11_R1.datawatcher.DataWatcher;
-import fr.il_totore.entitymetadata.api.v1_11_R1.nbt.*;
-import fr.il_totore.entitymetadata.api.nbt.NBTTagCompound;
 import fr.il_totore.entitymetadata.api.v1_11_R1.nbt.*;
 import org.bukkit.craftbukkit.libs.jline.internal.Nullable;
 import org.bukkit.craftbukkit.v1_11_R1.entity.CraftEntity;
@@ -14,6 +13,7 @@ import org.bukkit.entity.Player;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
+@Deprecated
 public class MetadataUtil implements fr.il_totore.entitymetadata.api.MetadataUtil {
 
     private static Constructor<net.minecraft.server.v1_11_R1.NBTTagEnd> nbtTagEndConstructor;

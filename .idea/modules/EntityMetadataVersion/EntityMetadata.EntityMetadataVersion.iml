@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":EntityMetadataVersion" external.linked.project.path="$MODULE_DIR$/../../../EntityMetadataVersion" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="EntityMetadata" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../EntityMetadataVersion">
+      <excludeFolder url="file://$MODULE_DIR$/../../../EntityMetadataVersion/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../EntityMetadataVersion/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

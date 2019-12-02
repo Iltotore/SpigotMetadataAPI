@@ -1,6 +1,8 @@
 package fr.il_totore.entitymetadata.api.v1_9_R2;
 
+import fr.il_totore.entitymetadata.api.nbt.NBTManager;
 import fr.il_totore.entitymetadata.api.datawatcher.DataWatcherKey;
+import fr.il_totore.entitymetadata.api.v1_9_R2.datawatcher.DataWatcherManager;
 import fr.il_totore.entitymetadata.api.v1_9_R2.datawatcher.DataWatcherRegistry;
 import fr.il_totore.entitymetadata.api.v1_9_R2.datawatcher.DataWatcherSerializer;
 import fr.il_totore.entitymetadata.api.v1_9_R2.datawatcher.SimpleDataWatcherSerializer;
@@ -18,7 +20,8 @@ public class VersionEntityMetadataAPI implements fr.il_totore.entitymetadata.api
 
     private DataWatcherRegistry dataWatcherRegistry = new DataWatcherRegistry();
     private MetadataUtil metadataUtil = new MetadataUtil();
-
+    private fr.il_totore.entitymetadata.api.v1_9_R2.nbt.NBTManager nbtManager = new fr.il_totore.entitymetadata.api.v1_9_R2.nbt.NBTManager();
+    private DataWatcherManager dataWatcherManager = new DataWatcherManager();
 
     {
         dataWatcherRegistry.registerSerializer(DataWatcherKey.BOOLEAN, new SimpleDataWatcherSerializer<>(net.minecraft.server.v1_9_R2.DataWatcherRegistry.h));
@@ -36,12 +39,24 @@ public class VersionEntityMetadataAPI implements fr.il_totore.entitymetadata.api
         dataWatcherRegistry.registerSerializer(DataWatcherKey.OPTIONAL_ITEM_STACK, DataWatcherSerializer.nullableOptionalOf(net.minecraft.server.v1_9_R2.DataWatcherRegistry.f, CraftItemStack::asNMSCopy, CraftItemStack::asBukkitCopy));
     }
 
+    @Override
     public DataWatcherRegistry getDataWatcherRegistry(){
         return dataWatcherRegistry;
     }
 
     @Override
+    @Deprecated
     public MetadataUtil getMetadataUtil(){
         return metadataUtil;
+    }
+
+    @Override
+    public NBTManager getNBTManager() {
+        return nbtManager;
+    }
+
+    @Override
+    public DataWatcherManager getDataWatcherManager() {
+        return dataWatcherManager;
     }
 }
