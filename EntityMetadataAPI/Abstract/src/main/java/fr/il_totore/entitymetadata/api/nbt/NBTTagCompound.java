@@ -4,8 +4,11 @@ import java.util.Set;
 
 public interface NBTTagCompound extends NBTBase {
 
+    void setTag(String key, NBTBase nbtBase);
+
     /**
      * Put the given byte value with the key.
+     *
      * @param key   the given key as {@link String}
      * @param value the value to put with the key
      */
@@ -13,69 +16,79 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Put the given short value with the key.
-     * @param key the given key as {@link String}
+     *
+     * @param key   the given key as {@link String}
      * @param value the value to put with the key
      */
     void setShort(String key, short value);
 
     /**
      * Put the given int value with the key.
-     * @param key the given key as {@link String}
+     *
+     * @param key   the given key as {@link String}
      * @param value the value to put with the key
      */
     void setInt(String key, int value);
 
     /**
      * Put the given long value with the key.
-     * @param key the given key as {@link String}
+     *
+     * @param key   the given key as {@link String}
      * @param value the value to put with the key
      */
     void setLong(String key, long value);
 
     /**
      * Put the given float value with the key.
-     * @param key the given key as {@link String}
+     *
+     * @param key   the given key as {@link String}
      * @param value the value to put with the key
      */
     void setFloat(String key, float value);
 
     /**
      * Put the given double value with the key.
-     * @param key the given key as {@link String}
+     *
+     * @param key   the given key as {@link String}
      * @param value the value to put with the key
      */
     void setDouble(String key, double value);
 
     /**
      * Put the given {@link String} value with the key.
-     * @param key the given key as {@link String}
+     *
+     * @param key   the given key as {@link String}
      * @param value the value to put with the key
      */
     void setString(String key, String value);
 
     /**
      * Put the given byte array with the key.
-     * @param key the given key as {@link String}
+     *
+     * @param key   the given key as {@link String}
      * @param value the value to put with the key
      */
     void setByteArray(String key, byte[] value);
 
     /**
      * Put the given int array with the key.
-     * @param key the given key as {@link String}
+     *
+     * @param key   the given key as {@link String}
      * @param value the value to put with the key
      */
     void setIntArray(String key, int[] value);
 
     /**
      * Put the given boolean value with the key.
-     * @param key the given key as {@link String}
+     *
+     * @param key   the given key as {@link String}
      * @param value the value to put with the key
      */
     void setBoolean(String key, boolean value);
 
     /**
      * Get the value associated to the given key
+     *
      * @param key the given key as {@link String}
      * @return the value associated to the given key
      */
@@ -83,6 +96,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Get the value associated to the given key
+     *
      * @param key the given key as {@link String}
      * @return the value associated to the given key
      */
@@ -90,6 +104,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Get the value associated to the given key
+     *
      * @param key the given key as {@link String}
      * @return the value associated to the given key
      */
@@ -97,6 +112,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Get the value associated to the given key
+     *
      * @param key the given key as {@link String}
      * @return the value associated to the given key
      */
@@ -104,6 +120,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Get the value associated to the given key
+     *
      * @param key the given key as {@link String}
      * @return the value associated to the given key
      */
@@ -111,6 +128,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Get the value associated to the given key
+     *
      * @param key the given key as {@link String}
      * @return the value associated to the given key
      */
@@ -118,6 +136,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Get the value associated to the given key
+     *
      * @param key the given key as {@link String}
      * @return the value associated to the given key
      */
@@ -125,6 +144,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Get the value associated to the given key
+     *
      * @param key the given key as {@link String}
      * @return the value associated to the given key
      */
@@ -132,6 +152,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Get the value associated to the given key
+     *
      * @param key the given key as {@link String}
      * @return the value associated to the given key
      */
@@ -139,6 +160,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Get the value associated to the given key
+     *
      * @param key the given key as {@link String}
      * @return the value associated to the given key
      */
@@ -146,7 +168,8 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Get the value associated to the given key
-     * @param key the given key as {@link String}
+     *
+     * @param key  the given key as {@link String}
      * @param type the {@link NBTTagType} of the {@link NBTTagList}
      * @return the value associated to the given key
      */
@@ -154,6 +177,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Get the value associated to the given key
+     *
      * @param key the given key as {@link String}
      * @return the value associated to the given key
      */
@@ -161,12 +185,14 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Remove the value associated to the given key
+     *
      * @param key the key of the entry to remove
      */
     void remove(String key);
 
     /**
      * return the {@link NBTTagType} of the value associated to the given key
+     *
      * @param key the key of the value
      * @return the {@link NBTTagType} of the value at the given key
      */
@@ -174,6 +200,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * check if the given key exists
+     *
      * @param key the given key
      * @return true if an entry with the given key exists
      */
@@ -181,7 +208,8 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Check if the {@link NBTTagCompound} has a value of the given {@link NBTTagType} associated with the given key
-     * @param key the given key
+     *
+     * @param key  the given key
      * @param type the type co compare
      * @return true if a value associated with the given key is of the given type
      */
@@ -189,6 +217,7 @@ public interface NBTTagCompound extends NBTBase {
 
     /**
      * Check if the {@link NBTTagCompound} is empty
+     *
      * @return true if empty
      */
     boolean isEmpty();
@@ -196,11 +225,27 @@ public interface NBTTagCompound extends NBTBase {
     /**
      * @return a set of the {@link NBTTagCompound} keys
      */
-    Set<String> toSet();
+    Set<String> keySet();
 
     /**
      * {@inheritDoc}
+     *
      * @return {@link NBTTagType#COMPOUND}
      */
     NBTTagType getType();
+
+    /**
+     * Parse this {@link NBTTagCompound} to String
+     *
+     * @return the String representation of this {@link NBTTagCompound}
+     */
+    String toString();
+
+    /**
+     * Merge this {@link NBTTagCompound} with the parameter one.
+     *
+     * @param nbtTagCompound the {@link NBTTagCompound} to merge with.
+     * @return this {@link NBTTagCompound} merged. Note this method doesn't create a new {@link NBTTagCompound} but edit the used one.
+     */
+    NBTTagCompound merge(NBTTagCompound nbtTagCompound);
 }

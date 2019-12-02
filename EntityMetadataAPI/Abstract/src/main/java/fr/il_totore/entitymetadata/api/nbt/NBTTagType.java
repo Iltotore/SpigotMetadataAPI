@@ -33,7 +33,7 @@ public class NBTTagType<T extends NBTBase> {
      * @return the {@link NBTTagType} with the same id as the given one
      */
     public static NBTTagType getById(int id){
-        for(NBTTagType type : values()) if(type.getId() == id) return type;
+        for(NBTTagType type : values) if(type.getId() == id) return type;
         return null;
     }
 

@@ -11,22 +11,27 @@ public class NBTTagCompound extends NBTBase<net.minecraft.server.v1_8_R3.NBTTagC
     }
 
     @Override
-    public Set<String> toSet(){
+    public Set<String> keySet() {
         return getHandle().c();
     }
 
     @Override
-    public NBTTagType getType(){
+    public NBTTagType getType() {
         return NBTTagType.getById(getHandle().getTypeId());
     }
 
     @Override
-    public void setByte(String key, byte b){
+    public void setTag(String key, fr.il_totore.entitymetadata.api.nbt.NBTBase nbtBase) {
+        getHandle().set(key, ((NBTBase) nbtBase).getHandle());
+    }
+
+    @Override
+    public void setByte(String key, byte b) {
         getHandle().setByte(key, b);
     }
 
     @Override
-    public void setShort(String key, short i){
+    public void setShort(String key, short i) {
         getHandle().setShort(key, i);
     }
 

@@ -159,6 +159,7 @@ Navigation bar styles
     padding: 0 0 5px 6px;
     text-transform: uppercase;
 }
+
 ul.navList, ul.subNavList {
     float: left;
     margin: 0 25px 0 0;
@@ -176,6 +177,7 @@ ul.subNavList li {
     list-style: none;
     float: left;
 }
+
 .topNav a:link, .topNav a:active, .topNav a:visited, .bottomNav a:link, .bottomNav a:active, .bottomNav a:visited {
     color: #FFFFFF;
     text-decoration: none;
@@ -205,6 +207,7 @@ Page header and footer styles
     margin: 0 20px;
     padding: 5px 0 0 0;
 }
+
 .indexHeader {
     margin: 10px;
     position: relative;
@@ -213,6 +216,7 @@ Page header and footer styles
 .indexHeader span {
     margin-right: 15px;
 }
+
 .indexHeader h1 {
     font-size: 13px;
 }
@@ -370,6 +374,7 @@ Table styles
 .overviewSummary, .memberSummary {
     padding: 0px;
 }
+
 .overviewSummary caption, .memberSummary caption, .typeSummary caption,
 .useSummary caption, .constantsSummary caption, .deprecatedSummary caption {
     position: relative;
@@ -463,11 +468,13 @@ Table styles
     float: left;
 
 }
+
 .overviewSummary td, .memberSummary td, .typeSummary td,
 .useSummary td, .constantsSummary td, .deprecatedSummary td {
     text-align: left;
     padding: 0px 0px 12px 10px;
 }
+
 th.colOne, th.colFirst, th.colLast, .useSummary th, .constantsSummary th,
 td.colOne, td.colFirst, td.colLast, .useSummary td, .constantsSummary td {
     vertical-align: top;
@@ -475,6 +482,7 @@ td.colOne, td.colFirst, td.colLast, .useSummary td, .constantsSummary td {
     padding-top: 8px;
     padding-bottom: 3px;
 }
+
 th.colFirst, th.colLast, th.colOne, .constantsSummary th {
     background: #dee3e9;
     text-align: left;
@@ -487,9 +495,11 @@ td.colFirst, th.colFirst {
 td.colLast, th.colLast {
     font-size: 13px;
 }
+
 td.colOne, th.colOne {
     font-size: 13px;
 }
+
 .overviewSummary td.colFirst, .overviewSummary th.colFirst,
 .useSummary td.colFirst, .useSummary th.colFirst,
 .overviewSummary td.colOne, .overviewSummary th.colOne,
@@ -499,6 +509,7 @@ td.colOne, th.colOne {
     width: 25%;
     vertical-align: top;
 }
+
 td.colOne a:link, td.colOne a:active, td.colOne a:visited, td.colOne a:hover, td.colFirst a:link, td.colFirst a:active, td.colFirst a:visited, td.colFirst a:hover, td.colLast a:link, td.colLast a:active, td.colLast a:visited, td.colLast a:hover, .constantValuesContainer td a:link, .constantValuesContainer td a:active, .constantValuesContainer td a:visited, .constantValuesContainer td a:hover {
     font-weight: bold;
 }

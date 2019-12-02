@@ -1,15 +1,14 @@
-import fr.il_totore.task.MarkdownToHtml
-
 plugins {
     id 'com.github.johnrengelman.shadow' version '5.1.0'
+    id 'maven-publish'
 }
+
+project.group 'fr.il_totore'
+project.version '2.0-SNAPSHOT'
 
 allprojects {
     apply plugin: 'java'
     apply plugin: 'maven'
-
-    group 'fr.il_totore'
-    version '1.0-SNAPSHOT'
 
     project.targetCompatibility = 1.8
     project.sourceCompatibility = 1.8
@@ -23,7 +22,6 @@ allprojects {
         mavenCentral()
         mavenLocal()
     }
-
 }
 
 dependencies {
@@ -61,7 +59,14 @@ task alljavadoc(type: Javadoc) {
     destinationDir = file("${buildDir}/docs/javadoc")
 }
 
-task markdown(type: MarkdownToHtml){
-    inputDir = file('markdown/')
-    outputDir = file('docs/')
+publishing {
+    publications {
+        compiler(MavenPublication) {
+            groupId group
+            artifactId 'entitymetadataapi'
+            version version
+
+            artifact new File(buildDir, 'libs/EntityMetadata-' + version + '-all.jar')
+        }
+    }
 }
