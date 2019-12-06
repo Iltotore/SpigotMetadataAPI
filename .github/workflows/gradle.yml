@@ -16,6 +16,6 @@ jobs:
     - name: Download BuildTools
       run: wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
     - name: Build needed versions
-      run: java -jar BuildTools.jar --rev 1.8.8 && java -jar BuildTools.jar --rev 1.9 && java -jar BuildTools.jar --rev 1.9.4 && java -jar BuildTools.jar --rev 1.10.2 && java -jar BuildTools.jar --rev 1.11 && java -jar BuildTools.jar --rev 1.11.2 && java -jar BuildTools.jar --rev 1.12.2 && java -jar BuildTools.jar --rev 1.13.1 && java -jar BuildTools.jar --rev 1.13.2 && java -jar BuildTools.jar --rev 1.14.4
+      run: java -jar BuildTools.jar --rev 1.8.8 && java -jar BuildTools.jar --rev 1.9 && java -jar BuildTools.jar --rev 1.9.4 && java -jar BuildTools.jar --rev 1.10.2 && java -jar BuildTools.jar --rev 1.11 && java -jar BuildTools.jar --rev 1.11.2 && java -jar BuildTools.jar --rev 1.12.2 && java -jar BuildTools.jar --rev 1.13 && java -jar BuildTools.jar --rev 1.13.2 && java -jar BuildTools.jar --rev 1.14.4
     - name: Build with Gradle
       run: chmod +x gradlew gradlew && ./gradlew build
