@@ -2,4 +2,14 @@ language: java
 jvm:
 - 1.8
 before_install:
- - chmod +x gradlew
+- "chmod +x gradlew"
+- "wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar"
+- "java -jar BuildTools.jar --rev 1.8.8"
+- "java -jar BuildTools.jar --rev 1.9"
+- "java -jar BuildTools.jar --rev 1.9.2"
+- "java -jar BuildTools.jar --rev 1.10.2"
+- "java -jar BuildTools.jar --rev 1.11.2"
+- "java -jar BuildTools.jar --rev 1.12.2"
+- "java -jar BuildTools.jar --rev 1.13.1"
+- "java -jar BuildTools.jar --rev 1.13.2"
+- "java -jar BuildTools.jar --rev 1.14.4"
