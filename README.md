@@ -49,3 +49,5 @@ dependencies {
 ## Usage
 - [**Javadoc**](https://iltotore.github.io/EntityMetadataAPI/javadoc/)
 - [**Wiki**](https://github.com/Iltotore/EntityMetadataAPI/wiki)
+
+If this project helped you, don't forget to help it by giving a star <3
