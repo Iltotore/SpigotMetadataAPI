@@ -5,7 +5,7 @@ A spigot library to easily change internals entity data without taking care of v
 ![Build badge](https://img.shields.io/github/workflow/status/Iltotore/EntityMetadataAPI/Java%20CI/master) ![License Badge](https://img.shields.io/github/license/Iltotore/EntityMetadataAPI) ![Release badge](https://img.shields.io/github/v/release/Iltotore/EntityMetadataAPI)
 
 ## Description
-EntityMetadataAPI is an API to edit entities's data from 1.8.8 to 1.14.4. It support NBT tags and [DataWatchers](https://wiki.vg/Entity_metadata). It allows Spigot developers to access Minecraft features that Spigot doesn't support without worry about version. 
+EntityMetadataAPI is an API to edit entities's data from 1.8.8 to 1.14.4. It support NBT tags and [DataWatchers](https://wiki.vg/Entity_metadata). It allows Spigot developers to access Minecraft features that Spigot doesn't support without worry about version. You can also use this API to edit NBT files like players's one. You can for example edit the position, the inventory, potion effects etc... of an offline player.
 
 
 ## Add to project
