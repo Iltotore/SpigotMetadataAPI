@@ -11,3 +11,5 @@ You can fork this project to fix some bugs or add new features. Beware of name a
 After fixing targetted issues/added wanted features, you can send a pull request to merge your branch with the main one.
 
 Beware of creating separated branches for unrelated issues/features
+
+Before sending a pull request, make sure the build passed correctly
