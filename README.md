@@ -42,13 +42,13 @@ Maven:
 
 Gradle:
 - Repository
-```groovy
+```gradle
 repositories {
 	maven { url 'https://raw.githubusercontent.com/Iltotore/maven/master' }
 }
 ```
 - Dependency
-```groovy
+```gradle
 dependencies {
 	implementation 'fr.il_totore:entitymetadataapi:Tag'
 }
