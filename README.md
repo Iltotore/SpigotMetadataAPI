@@ -2,7 +2,7 @@
 # EntityMetadataAPI
 A spigot library to easily change internals entity data without taking care of version.
 
-![Build badge](https://img.shields.io/github/workflow/status/Iltotore/EntityMetadataAPI/Java%20CI/master) ![License Badge](https://img.shields.io/github/license/Iltotore/EntityMetadataAPI) ![Release badge](https://img.shields.io/github/v/release/Iltotore/EntityMetadataAPI)
+![Build badge](https://img.shields.io/github/workflow/status/Iltotore/EntityMetadataAPI/Java%20CI/master) ![Security Badge](https://snyk.io/test/github/Iltotore/EntityMetadataAPI/badge.svg) ![License Badge](https://img.shields.io/github/license/Iltotore/EntityMetadataAPI) ![Release badge](https://img.shields.io/github/v/release/Iltotore/EntityMetadataAPI)
 
 ## Description
 EntityMetadataAPI is an API to edit entities's data from 1.8.8 to 1.14.4. It allows Spigot developers to access Minecraft entities features that Spigot doesn't support without worry about version.
