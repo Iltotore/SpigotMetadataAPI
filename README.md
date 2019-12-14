@@ -58,6 +58,9 @@ dependencies {
 - [**Javadoc**](https://iltotore.github.io/EntityMetadataAPI/javadoc/)
 - [**Wiki**](https://github.com/Iltotore/EntityMetadataAPI/wiki)
 
+## Download sources
+- **Step 1**: Clone this repository
+- **Step 2**: Run `sh setup.sh` in the `scripts` folder to download NMS dependencies.
 
 ## Contributing
 You can contribute to this project by creating Issues and upgrading the project.
