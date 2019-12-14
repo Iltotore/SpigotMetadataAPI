@@ -4,7 +4,7 @@ plugins {
 }
 
 project.group 'fr.il_totore'
-project.version '2.0-SNAPSHOT'
+project.version '2.1-SNAPSHOT'
 
 allprojects {
     apply plugin: 'java'
@@ -60,16 +60,6 @@ task alljavadoc(type: Javadoc) {
 }
 
 publishing {
-    repositories {
-        maven {
-            name="Github"
-            url = "https://maven.pkg.github.com/Iltotore/EntityMetadataAPI"
-            credentials {
-                username = System.getenv("GITHUB_USER")
-                password = System.getenv("GITHUB_PASSWORD")
-            }
-        }
-    }
     publications {
         compiler(MavenPublication) {
             groupId group
