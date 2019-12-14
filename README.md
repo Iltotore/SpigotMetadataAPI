@@ -1,5 +1,5 @@
 
-# EntityMetadataAPI
+![Logo](logo.svg)
 A spigot library to easily change internals entity data without taking care of version.
 
 ![Build badge](https://img.shields.io/github/workflow/status/Iltotore/EntityMetadataAPI/Java%20CI/master) ![Security Badge](https://snyk.io/test/github/Iltotore/EntityMetadataAPI/badge.svg) ![License Badge](https://img.shields.io/github/license/Iltotore/EntityMetadataAPI) ![Release badge](https://img.shields.io/github/v/release/Iltotore/EntityMetadataAPI)
