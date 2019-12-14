@@ -35,6 +35,7 @@ public class EntityMetadataAPI {
         versions.put(ServerVersion.v1_13, fr.il_totore.entitymetadata.api.v1_13_R1.VersionEntityMetadataAPI::new);
         versions.put(ServerVersion.v1_13_2, fr.il_totore.entitymetadata.api.v1_13_R2.VersionEntityMetadataAPI::new);
         versions.put(ServerVersion.v1_14, fr.il_totore.entitymetadata.api.v1_14_R1.VersionEntityMetadataAPI::new);
+        versions.put(ServerVersion.v1_15, fr.il_totore.entitymetadata.api.v1_15_R1.VersionEntityMetadataAPI::new);
     }
 
 }

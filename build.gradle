@@ -60,12 +60,21 @@ task alljavadoc(type: Javadoc) {
 }
 
 publishing {
+    repositories {
+        maven {
+            name="Github"
+            url = "https://maven.pkg.github.com/Iltotore/EntityMetadataAPI"
+            credentials {
+                username = System.getenv("GITHUB_USER")
+                password = System.getenv("GITHUB_PASSWORD")
+            }
+        }
+    }
     publications {
         compiler(MavenPublication) {
             groupId group
             artifactId 'entitymetadataapi'
             version version
-
             artifact new File(buildDir, 'libs/EntityMetadata-' + version + '-all.jar')
         }
     }
