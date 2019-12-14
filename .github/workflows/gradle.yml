@@ -14,6 +14,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Setup maven repository
-      run: sh setup.sh --no-check-certificate=true # Spigot actually have problems with its Jenkins certificate
+      run: cd scripts && sh setup.sh --no-check-certificate=true && cd ../ # Spigot actually have problems with its Jenkins certificate
     - name: Build with Gradle
       run: chmod +x gradlew gradlew && ./gradlew build
