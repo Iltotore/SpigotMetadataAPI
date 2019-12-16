@@ -36,7 +36,7 @@ Maven:
 <dependency>
 	<groupId>fr.il_totore</groupId>
 	<artifactId>entitymetadatapi</artifactId>
-	<version>Tag</version>
+	<version>version</version>
 </dependency>
 ```
 
@@ -50,7 +50,7 @@ repositories {
 - Dependency
 ```gradle
 dependencies {
-	implementation 'fr.il_totore:entitymetadataapi:Tag'
+	implementation 'fr.il_totore:entitymetadataapi:version'
 }
 ```
 
