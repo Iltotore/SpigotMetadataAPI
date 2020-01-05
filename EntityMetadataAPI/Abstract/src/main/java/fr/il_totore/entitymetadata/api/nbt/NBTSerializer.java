@@ -119,10 +119,8 @@ public interface NBTSerializer<T extends NBTBase> {
             outputStream.writeByte(valueType.getId());
             outputStream.writeInt(nbt.size());
 
-            int i = 0;
             for(NBTBase nbtBase : nbt.getTags(nbtManager)) {
                 serializer.write(nbtManager, outputStream, nbtBase);
-                i++;
             }
         }
     }

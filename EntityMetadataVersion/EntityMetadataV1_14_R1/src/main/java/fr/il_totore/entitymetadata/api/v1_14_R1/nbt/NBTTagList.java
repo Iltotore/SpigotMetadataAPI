@@ -78,6 +78,11 @@ public class NBTTagList extends NBTBase<net.minecraft.server.v1_14_R1.NBTTagList
     }
 
     @Override
+    public boolean isEmpty() {
+        return getHandle().isEmpty();
+    }
+
+    @Override
     public NBTTagType<?> getValueType() {
         return NBTTagType.getById(getHandle().a_());
     }

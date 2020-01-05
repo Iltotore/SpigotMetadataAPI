@@ -21,6 +21,6 @@ public class NBTBase<T extends net.minecraft.server.v1_14_R1.NBTBase> implements
 
     @Override
     public boolean isEmpty() {
-        return true;
+        return false;
     }
 }
