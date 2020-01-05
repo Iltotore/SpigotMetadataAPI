@@ -12,6 +12,7 @@ import org.bukkit.entity.Player;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -83,7 +84,7 @@ public class NBTManager implements fr.il_totore.entitymetadata.api.nbt.NBTManage
 
             case 9:
                 NBTTagList nbtList = new NBTTagList(new net.minecraft.server.v1_8_R3.NBTTagList());
-                nbtList.addAll((Collection<NBTBase>) value);
+                nbtList.addAll(value == null ? new ArrayList<>() : (Collection<NBTBase>) value);
                 return (T) nbtList;
 
             case 10:
