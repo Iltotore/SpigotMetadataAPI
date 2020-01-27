@@ -1,7 +1,12 @@
 plugins {
+    id 'java'
+    id 'maven'
     id 'com.github.johnrengelman.shadow' version '5.1.0'
     id 'maven-publish'
+    id 'fr.il_totore.manadrop' version '0.3-SNAPSHOT'
 }
+
+
 
 project.group 'fr.il_totore'
 project.version '2.1-SNAPSHOT'
@@ -48,14 +53,14 @@ shadowJar {
     configurations = [project.configurations.compile]
 }
 
-def exportedProjects = [
+def documentedProjects = [
         ':EntityMetadataAPI:Core',
         ':EntityMetadataAPI:Abstract'
 ]
 
 task alljavadoc(type: Javadoc) {
-    source exportedProjects.collect { name -> project(name).sourceSets.main.allJava }
-    classpath = files(exportedProjects.collect { name -> project(name).sourceSets.main.compileClasspath })
+    source documentedProjects.collect { name -> project(name).sourceSets.main.allJava }
+    classpath = files(documentedProjects.collect { name -> project(name).sourceSets.main.compileClasspath })
     destinationDir = file("${buildDir}/docs/javadoc")
 }
 
@@ -68,4 +73,9 @@ publishing {
             artifact new File(buildDir, 'libs/EntityMetadata-' + version + '-all.jar')
         }
     }
+}
+
+buildTools {
+    versions '1.8.8', '1.9', '1.9.4', '1.10.2', '1.11', '1.12.2', '1.13', '1.13.2', '1.14.4', '1.15'
+    workDir = file("work/")
 }
