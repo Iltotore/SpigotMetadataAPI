@@ -2,7 +2,10 @@ package fr.il_totore.entitymetadata.api.nbt;
 
 import fr.il_totore.entitymetadata.util.ThrowingBiConsumer;
 import fr.il_totore.entitymetadata.util.ThrowingFunction;
+import org.bukkit.Location;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
+import org.bukkit.inventory.ItemStack;
 
 import java.io.DataInput;
 import java.io.DataInputStream;
@@ -19,17 +22,67 @@ public interface NBTManager {
 
     /**
      * Set to the given {@link Entity} the given {@link NBTTagCompound}
-     * @param entity the owner of data to edit
+     *
+     * @param entity         the owner of data to edit
      * @param nbtTagCompound the {@link NBTTagCompound} used to set entity's data
      */
     void setNBTTag(Entity entity, NBTTagCompound nbtTagCompound);
 
     /**
+     * Get a new {@link NBTTagCompound} of the given {@link ItemStack}
+     *
+     * @param itemStack the {@link NBTTagCompound}'s owner
+     * @return a new {@link NBTTagCompound} instance with {@link ItemStack}'s data
+     */
+    NBTTagCompound getNBTTag(ItemStack itemStack);
+
+    /**
+     * Set to the given {@link ItemStack} the given {@link NBTTagCompound}
+     *
+     * @param itemStack      the owner of data to edit
+     * @param nbtTagCompound the {@link NBTTagCompound} used to set entity's data
+     */
+    void setNBTTag(ItemStack itemStack, NBTTagCompound nbtTagCompound);
+
+    /**
+     * Get a new {@link NBTTagCompound} of the given {@link Block}
+     *
+     * @param block the {@link NBTTagCompound}'s owner
+     * @return a new {@link NBTTagCompound} instance with {@link Block}'s data
+     */
+    NBTTagCompound getNBTTag(Block block);
+
+    /**
+     * Set to the given {@link Block} the given {@link NBTTagCompound}
+     *
+     * @param block          the owner of data to edit
+     * @param nbtTagCompound the {@link NBTTagCompound} used to set entity's data
+     */
+    void setNBTTag(Block block, NBTTagCompound nbtTagCompound);
+
+    /**
+     * Get a new {@link NBTTagCompound} of the given {@link Location}
+     *
+     * @param location the {@link NBTTagCompound}'s owner
+     * @return a new {@link NBTTagCompound} instance with {@link Location}'s data
+     */
+    NBTTagCompound getNBTTag(Location location);
+
+    /**
+     * Set to the given {@link Location} the given {@link NBTTagCompound}
+     *
+     * @param location       the owner of data to edit
+     * @param nbtTagCompound the {@link NBTTagCompound} used to set entity's data
+     */
+    void setNBTTag(Location location, NBTTagCompound nbtTagCompound);
+
+    /**
      * Create a new child instance of {@link NBTBase}
-     * @param type the {@link NBTTagType} of this {@link NBTBase}
+     *
+     * @param type  the {@link NBTTagType} of this {@link NBTBase}
      * @param value the value to set in the new {@link NBTBase} instance
-     * @param <V> the value's generic type
-     * @param <T> the new instance's generic type
+     * @param <V>   the value's generic type
+     * @param <T>   the new instance's generic type
      * @return a new T instance with the given V value
      */
     <V, T extends NBTBase> T of(NBTTagType<T> type, V value);
