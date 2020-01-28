@@ -40,6 +40,7 @@ dependencies {
     compile project(nms('1_13_R1'))
     compile project(nms('1_13_R2'))
     compile project(nms('1_14_R1'))
+    compile project(nms('1_15_R1'))
 
     compile project(':EntityMetadataAPI:Abstract')
     compile project(':EntityMetadataAPI:Core')
