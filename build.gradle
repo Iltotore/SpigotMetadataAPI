@@ -9,7 +9,7 @@ plugins {
 
 
 project.group 'fr.il_totore'
-project.version '2.1-SNAPSHOT'
+project.version '3.0-SNAPSHOT'
 
 allprojects {
     apply plugin: 'java'
