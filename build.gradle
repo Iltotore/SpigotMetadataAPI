@@ -3,7 +3,7 @@ plugins {
     id 'maven'
     id 'com.github.johnrengelman.shadow' version '5.1.0'
     id 'maven-publish'
-    id 'fr.il_totore.manadrop' version '0.3-SNAPSHOT'
+    id 'fr.il_totore.manadrop' version '0.3-SNAPSHOT-fixed'
 }
 
 
