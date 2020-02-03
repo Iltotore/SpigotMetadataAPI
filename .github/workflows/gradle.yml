@@ -14,6 +14,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Setup variables
-      run: export MAVEN_HOME=$M2_HOME
+      run: echo "Setting maven path to $M2_HOME" && export MAVEN_HOME=$M2_HOME
     - name: Build with Gradle
       run: chmod +x gradlew gradlew && ./gradlew buildTools build --stacktrace
