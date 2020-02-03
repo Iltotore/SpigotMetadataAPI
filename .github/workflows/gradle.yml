@@ -14,6 +14,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: chmod +x gradlew gradlew && ./gradlew buildTools build --stacktrace
-      env:
-        MAVEN_HOME: $M2_HOME
+      run: export MAVEN_HOME=$M2_HOME && chmod +x gradlew gradlew && ./gradlew buildTools build --stacktrace
