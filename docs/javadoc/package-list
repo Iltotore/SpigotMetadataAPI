@@ -1,5 +1,5 @@
-fr.il_totore.entitymetadata.api
-fr.il_totore.entitymetadata.api.datawatcher
-fr.il_totore.entitymetadata.api.nbt
-fr.il_totore.entitymetadata.exception
-fr.il_totore.entitymetadata.util
+fr.il_totore.spigotmetadata.api
+fr.il_totore.spigotmetadata.api.datawatcher
+fr.il_totore.spigotmetadata.api.nbt
+fr.il_totore.spigotmetadata.exception
+fr.il_totore.spigotmetadata.util
