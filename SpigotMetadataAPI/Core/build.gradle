@@ -1,0 +1,18 @@
+dependencies {
+    compile project(nms('1_8_R3'))
+    compile project(nms('1_9_R1'))
+    compile project(nms('1_9_R2'))
+    compile project(nms('1_10_R1'))
+    compile project(nms('1_11_R1'))
+    compile project(nms('1_12_R1'))
+    compile project(nms('1_13_R1'))
+    compile project(nms('1_13_R2'))
+    compile project(nms('1_14_R1'))
+    compile project(nms('1_15_R1'))
+
+    compile project(':SpigotMetadataAPI:Abstract')
+}
+
+static String nms(String version) {
+    return ':SpigotMetadataVersion:SpigotMetadataV' + version
+}

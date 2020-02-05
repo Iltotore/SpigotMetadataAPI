@@ -42,12 +42,12 @@ dependencies {
     compile project(nms('1_14_R1'))
     compile project(nms('1_15_R1'))
 
-    compile project(':EntityMetadataAPI:Abstract')
-    compile project(':EntityMetadataAPI:Core')
+    compile project(':SpigotMetadataAPI:Abstract')
+    compile project(':SpigotMetadataAPI:Core')
 }
 
 static String nms(String version) {
-    return ':EntityMetadataVersion:EntityMetadataV' + version
+    return ':SpigotMetadataVersion:SpigotMetadataV' + version
 }
 
 shadowJar {
@@ -55,8 +55,8 @@ shadowJar {
 }
 
 def documentedProjects = [
-        ':EntityMetadataAPI:Core',
-        ':EntityMetadataAPI:Abstract'
+        ':SpigotMetadataAPI:Core',
+        ':SpigotMetadataAPI:Abstract'
 ]
 
 task alljavadoc(type: Javadoc) {
@@ -69,9 +69,9 @@ publishing {
     publications {
         compiler(MavenPublication) {
             groupId group
-            artifactId 'entitymetadataapi'
+            artifactId 'spigotmetadataapi'
             version version
-            artifact new File(buildDir, 'libs/EntityMetadata-' + version + '-all.jar')
+            artifact new File(buildDir, 'libs/SpigotMetadata-' + version + '-all.jar')
         }
     }
 }

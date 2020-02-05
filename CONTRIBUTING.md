@@ -8,7 +8,7 @@ If you find a problem, you can open an issue containing:
 
 # Editing the code
 You can fork this project to fix some bugs or add new features. Beware of name and describe correctly your fork.
-After fixing targetted issues/added wanted features, you can send a pull request to merge your branch with the main one.
+After fixing targeted issues/added wanted features, you can send a pull request to merge your branch with the main one.
 
 Beware of creating separated branches for unrelated issues/features
 
