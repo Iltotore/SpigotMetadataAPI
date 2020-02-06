@@ -1,15 +1,15 @@
 
 ![Logo](logo.png)
-A spigot library to easily change internals entity data without taking care of version.
+A spigot library to easily change internals data without taking care of version.
 
 ![Build badge](https://img.shields.io/github/workflow/status/Iltotore/SpigotMetadataAPI/Java%20CI/master) ![Security Badge](https://snyk.io/test/github/Iltotore/SpigotMetadataAPI/badge.svg) ![License Badge](https://img.shields.io/github/license/Iltotore/SpigotMetadataAPI) ![Release badge](https://img.shields.io/github/v/release/Iltotore/SpigotMetadataAPI)
 
 ## Description
-SpigotMetadataAPI is an API to edit entities's data from 1.8.8 to 1.15. It allows Spigot developers to access Minecraft entities features that Spigot doesn't support without worry about version.
+SpigotMetadataAPI is an API to edit entities/blocks/items's data from 1.8.8 to 1.15. It allows Spigot developers to access Minecraft entities features that Spigot doesn't support without worry about version.
 
 ## Features
 ### [NBT Support](https://github.com/Iltotore/SpigotMetadataAPI/wiki/NBT)
-This project allow users to edit entites's NBT and edit Minecraft NBT files (.dat) like players's one. You can for example edit the position, the inventory, potion effects etc... of an offline player.
+This project allow users to edit metadatable's NBT and edit Minecraft NBT files (.dat) like players's one. You can for example edit the position, the inventory, potion effects etc... of an offline player.
 
 ### [DataWatcher Support](https://github.com/Iltotore/SpigotMetadataAPI/wiki/DataWatcher)
 You can using this librairy edit entities's DataWatcher. You can for example enable/disable Player's skin parts, set arrow count on a Player, trigger animations like EnderCrystal and Guardian beam, or the Evoker summoning animation.
@@ -35,7 +35,7 @@ Maven:
 ```xml
 <dependency>
 	<groupId>fr.il_totore</groupId>
-	<artifactId>SpigotMetadatapi</artifactId>
+	<artifactId>spigotmetadataapi</artifactId>
 	<version>version</version>
 </dependency>
 ```
@@ -50,7 +50,7 @@ repositories {
 - Dependency
 ```gradle
 dependencies {
-	implementation 'fr.il_totore:SpigotMetadataapi:version'
+	implementation 'fr.il_totore:spigotmetadataapi:version'
 }
 ```
 
