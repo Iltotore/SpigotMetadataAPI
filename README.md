@@ -5,7 +5,7 @@ A spigot library to easily change internals data without taking care of version.
 ![Build badge](https://img.shields.io/github/workflow/status/Iltotore/SpigotMetadataAPI/Java%20CI/master) ![Security Badge](https://snyk.io/test/github/Iltotore/SpigotMetadataAPI/badge.svg) ![License Badge](https://img.shields.io/github/license/Iltotore/SpigotMetadataAPI) ![Release badge](https://img.shields.io/github/v/release/Iltotore/SpigotMetadataAPI)
 
 ## Description
-SpigotMetadataAPI is an API to edit entities/blocks/items's data from 1.8.8 to 1.15. It allows Spigot developers to access Minecraft entities features that Spigot doesn't support without worry about version.
+SpigotMetadataAPI is an API to edit entities/blocks/items's data from 1.8.8 to 1.15.2. It allows Spigot developers to access Minecraft entities features that Spigot doesn't support without worry about version.
 
 ## Features
 ### [NBT Support](https://github.com/Iltotore/SpigotMetadataAPI/wiki/NBT)
@@ -60,7 +60,7 @@ dependencies {
 
 ## Download sources
 - **Step 1**: Clone this repository
-- **Step 2**: Run `sh setup.sh` in the `scripts` folder to download NMS dependencies.
+- **Step 2**: Run the `buildTools` task to download NMS dependencies. Note:
 
 ## Contributing
 You can contribute to this project by creating Issues and upgrading the project.
