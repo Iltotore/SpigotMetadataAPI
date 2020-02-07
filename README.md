@@ -60,7 +60,7 @@ dependencies {
 
 ## Download sources
 - **Step 1**: Clone this repository
-- **Step 2**: Run the `buildTools` task to download NMS dependencies. Note:
+- **Step 2**: Run the `buildTools` task to download NMS dependencies. A valid `MAVEN_HOME` path is recommended. Note the first execution will take several minutes. Next builds will be faster.
 
 ## Contributing
 You can contribute to this project by creating Issues and upgrading the project.
