@@ -1,6 +1,6 @@
 
 ![Logo](logo.png)
-A spigot library to easily change internals data without taking care of version.
+A spigot library to easily change internal data without taking care of version.
 
 ![Build badge](https://img.shields.io/github/workflow/status/Iltotore/SpigotMetadataAPI/Java%20CI/master) ![Security Badge](https://snyk.io/test/github/Iltotore/SpigotMetadataAPI/badge.svg) ![License Badge](https://img.shields.io/github/license/Iltotore/SpigotMetadataAPI) ![Release badge](https://img.shields.io/github/v/release/Iltotore/SpigotMetadataAPI)
 
