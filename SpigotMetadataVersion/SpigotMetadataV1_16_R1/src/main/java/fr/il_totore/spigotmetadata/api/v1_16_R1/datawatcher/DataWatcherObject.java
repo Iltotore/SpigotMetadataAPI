@@ -1,21 +1,25 @@
-package fr.il_totore.spigotmetadata.api.v1_8_R3.datawatcher;
+package fr.il_totore.spigotmetadata.api.v1_16_R1.datawatcher;
 
 import java.util.function.Function;
 
 public class DataWatcherObject<F, T> implements fr.il_totore.spigotmetadata.api.datawatcher.DataWatcherObject<F, T> {
 
-    private int index;
+    private net.minecraft.server.v1_16_R1.DataWatcherObject<T> handle;
     private Function<F, T> bukkitToNotchFunction;
     private Function<T, F> notchToBukkitFunction;
 
-    public DataWatcherObject(int index, Function<F, T> bukkitToNotchFunction, Function<T, F> notchToBukkitFunction) {
-        this.index = index;
+    public DataWatcherObject(net.minecraft.server.v1_16_R1.DataWatcherObject<T> handle, Function<F, T> bukkitToNotchFunction, Function<T, F> notchToBukkitFunction) {
+        this.handle = handle;
         this.bukkitToNotchFunction = bukkitToNotchFunction;
         this.notchToBukkitFunction = notchToBukkitFunction;
     }
 
     public int getIndex() {
-        return index;
+        return handle.a();
+    }
+
+    public net.minecraft.server.v1_16_R1.DataWatcherObject<T> getHandle() {
+        return handle;
     }
 
     public T bukkitToNotch(F from) {

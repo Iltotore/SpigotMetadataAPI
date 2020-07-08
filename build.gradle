@@ -9,7 +9,7 @@ plugins {
 
 
 project.group 'fr.il_totore'
-project.version '3.0-SNAPSHOT'
+project.version '4.0-SNAPSHOT'
 
 allprojects {
     apply plugin: 'java'
@@ -78,6 +78,6 @@ publishing {
 }
 
 buildTools {
-    versions '1.8.8', '1.9', '1.9.4', '1.10.2', '1.11', '1.12.2', '1.13', '1.13.2', '1.14.4', '1.15'
+    versions '1.8.8', '1.9', '1.9.4', '1.10.2', '1.11', '1.12.2', '1.13', '1.13.2', '1.14.4', '1.15', '1.16.1'
     workDir = file("work/")
 }

@@ -19,9 +19,9 @@ public class DataWatcherRegistry implements fr.il_totore.spigotmetadata.api.data
         }
     }
 
-    private Map<DataWatcherKey<?>, DataWatcherSerializer<?>> map = new HashMap<>();
+    private Map<DataWatcherKey<?>, DataWatcherSerializer<?, ?>> map = new HashMap<>();
 
-    public <T> void registerSerializer(DataWatcherKey<T> key, DataWatcherSerializer<T> dataWatcherSerializer){
+    public <T, F> void registerSerializer(DataWatcherKey<T> key, DataWatcherSerializer<T, F> dataWatcherSerializer){
         map.put(key, dataWatcherSerializer);
     }
 
@@ -30,7 +30,7 @@ public class DataWatcherRegistry implements fr.il_totore.spigotmetadata.api.data
     }
 
     @SuppressWarnings("unchecked")
-    public <T> DataWatcherSerializer<T> getSerializer(DataWatcherKey<T> key){
-        return (DataWatcherSerializer<T>) map.get(key);
+    public <T> DataWatcherSerializer<T, ?> getSerializer(DataWatcherKey<T> key){
+        return (DataWatcherSerializer<T, ?>) map.get(key);
     }
 }

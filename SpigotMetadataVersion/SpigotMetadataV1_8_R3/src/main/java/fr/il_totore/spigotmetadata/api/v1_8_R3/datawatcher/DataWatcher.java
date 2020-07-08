@@ -14,7 +14,7 @@ public class DataWatcher implements fr.il_totore.spigotmetadata.api.datawatcher.
     @Override
     public <F,T> void set(fr.il_totore.spigotmetadata.api.datawatcher.DataWatcherObject<F, T> object, F value){
         assert object instanceof DataWatcherObject : "Invalid version";
-        handle.watch(object.getIndex(), value);
+        handle.watch(object.getIndex(), object.bukkitToNotch(value));
     }
 
     @Override

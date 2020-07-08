@@ -35,7 +35,7 @@ public class SpigotMetadataAPI {
         versions.put(ServerVersion.v1_13, fr.il_totore.spigotmetadata.api.v1_13_R1.VersionSpigotMetadataAPI::new);
         versions.put(ServerVersion.v1_13_2, fr.il_totore.spigotmetadata.api.v1_13_R2.VersionSpigotMetadataAPI::new);
         versions.put(ServerVersion.v1_14, fr.il_totore.spigotmetadata.api.v1_14_R1.VersionSpigotMetadataAPI::new);
-        versions.put(ServerVersion.v1_15, fr.il_totore.spigotmetadata.api.v1_15_R1.VersionSpigotMetadataAPI::new);
+        versions.put(ServerVersion.v1_15, fr.il_totore.spigotmetadata.api.v1_16_R1.VersionSpigotMetadataAPI::new);
     }
 
 }
