@@ -88,4 +88,6 @@ public class ServerVersion implements Comparable<ServerVersion> {
     public static final ServerVersion v1_14_3 = new ServerVersion("v1_14_R1");
     public static final ServerVersion v1_14_4 = new ServerVersion("v1_14_R1");
     public static final ServerVersion v1_15 = new ServerVersion("v1_15_R1");
+
+    public static final ServerVersion v1_16_1 = new ServerVersion("v1_16_R1");
 }

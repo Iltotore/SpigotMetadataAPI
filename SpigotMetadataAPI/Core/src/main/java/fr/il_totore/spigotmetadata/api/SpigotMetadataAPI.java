@@ -16,8 +16,8 @@ public class SpigotMetadataAPI {
      *
      * @return the {@link VersionSpigotMetadataAPI} instance for the server's version
      */
-    public static VersionSpigotMetadataAPI getAPI(){
-        if(api == null){
+    public static VersionSpigotMetadataAPI getAPI() {
+        if(api == null) {
             ServerVersion version = ServerVersion.fromServer(Bukkit.getServer());
             Bukkit.getLogger().info("[SpigotMetadataAPI] Loading version " + version.getNMSVersion());
             api = versions.get(version).get();
@@ -25,7 +25,7 @@ public class SpigotMetadataAPI {
         return api;
     }
 
-    static{
+    static {
         versions.put(ServerVersion.v1_8_4, fr.il_totore.spigotmetadata.api.v1_8_R3.VersionSpigotMetadataAPI::new);
         versions.put(ServerVersion.v1_9, fr.il_totore.spigotmetadata.api.v1_9_R1.VersionSpigotMetadataAPI::new);
         versions.put(ServerVersion.v1_9_4, fr.il_totore.spigotmetadata.api.v1_9_R2.VersionSpigotMetadataAPI::new);
@@ -35,7 +35,8 @@ public class SpigotMetadataAPI {
         versions.put(ServerVersion.v1_13, fr.il_totore.spigotmetadata.api.v1_13_R1.VersionSpigotMetadataAPI::new);
         versions.put(ServerVersion.v1_13_2, fr.il_totore.spigotmetadata.api.v1_13_R2.VersionSpigotMetadataAPI::new);
         versions.put(ServerVersion.v1_14, fr.il_totore.spigotmetadata.api.v1_14_R1.VersionSpigotMetadataAPI::new);
-        versions.put(ServerVersion.v1_15, fr.il_totore.spigotmetadata.api.v1_16_R1.VersionSpigotMetadataAPI::new);
+        versions.put(ServerVersion.v1_15, fr.il_totore.spigotmetadata.api.v1_15_R1.VersionSpigotMetadataAPI::new);
+        versions.put(ServerVersion.v1_16_1, fr.il_totore.spigotmetadata.api.v1_16_R1.VersionSpigotMetadataAPI::new);
     }
 
 }
