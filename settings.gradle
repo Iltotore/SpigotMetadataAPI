@@ -15,7 +15,8 @@ nms('1_13_R2'),
 nms('1_14_R1'),
 nms('1_15_R1'),
 nms('1_16_R1'),
-nms('1_16_R2')
+nms('1_16_R2'),
+nms('1_17_R1')
 
 static String nms(String version){
     return 'SpigotMetadataVersion:SpigotMetadataV' + version

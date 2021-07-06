@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'maven'
     id 'com.github.johnrengelman.shadow' version '5.1.0'
     id 'maven-publish'
     id 'fr.il_totore.manadrop' version '0.3-SNAPSHOT-fixed'
@@ -9,11 +8,11 @@ plugins {
 
 
 project.group 'fr.il_totore'
-project.version '4.0-SNAPSHOT'
+project.version '4.2.0-SNAPSHOT'
 
 allprojects {
     apply plugin: 'java'
-    apply plugin: 'maven'
+    apply plugin: 'maven-publish'
 
     project.targetCompatibility = 1.8
     project.sourceCompatibility = 1.8
@@ -31,20 +30,22 @@ allprojects {
 
 dependencies {
 
-    compile project(nms('1_8_R3'))
-    compile project(nms('1_9_R1'))
-    compile project(nms('1_9_R2'))
-    compile project(nms('1_10_R1'))
-    compile project(nms('1_11_R1'))
-    compile project(nms('1_12_R1'))
-    compile project(nms('1_13_R1'))
-    compile project(nms('1_13_R2'))
-    compile project(nms('1_14_R1'))
-    compile project(nms('1_15_R1'))
-    compile project(nms('1_16_R1'))
+    implementation project(nms('1_8_R3'))
+    implementation project(nms('1_9_R1'))
+    implementation project(nms('1_9_R2'))
+    implementation project(nms('1_10_R1'))
+    implementation project(nms('1_11_R1'))
+    implementation project(nms('1_12_R1'))
+    implementation project(nms('1_13_R1'))
+    implementation project(nms('1_13_R2'))
+    implementation project(nms('1_14_R1'))
+    implementation project(nms('1_15_R1'))
+    implementation project(nms('1_16_R1'))
+    implementation project(nms('1_16_R2'))
+    implementation project(nms('1_17_R1'))
 
-    compile project(':SpigotMetadataAPI:Abstract')
-    compile project(':SpigotMetadataAPI:Core')
+    implementation project(':SpigotMetadataAPI:Abstract')
+    implementation project(':SpigotMetadataAPI:Core')
 }
 
 static String nms(String version) {
@@ -52,7 +53,8 @@ static String nms(String version) {
 }
 
 shadowJar {
-    configurations = [project.configurations.compile]
+    project.configurations.implementation.canBeResolved = true
+    configurations = [project.configurations.implementation]
 }
 
 def documentedProjects = [
@@ -79,6 +81,6 @@ publishing {
 }
 
 buildTools {
-    versions '1.8.8', '1.9', '1.9.4', '1.10.2', '1.11', '1.12.2', '1.13', '1.13.2', '1.14.4', '1.15', '1.16.1', '1.16.2'
+    versions '1.8.8', '1.9', '1.9.4', '1.10.2', '1.11', '1.12.2', '1.13', '1.13.2', '1.14.4', '1.15', '1.16.1', '1.16.2', '1.17'
     workDir = file("work/")
 }
