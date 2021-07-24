@@ -8,7 +8,7 @@ plugins {
 
 
 project.group 'fr.il_totore'
-project.version '4.2.0-SNAPSHOT'
+project.version '4.3.0-SNAPSHOT'
 
 allprojects {
     apply plugin: 'java'
@@ -42,6 +42,7 @@ dependencies {
     implementation project(nms('1_15_R1'))
     implementation project(nms('1_16_R1'))
     implementation project(nms('1_16_R2'))
+    implementation project(nms('1_16_R3'))
     implementation project(nms('1_17_R1'))
 
     implementation project(':SpigotMetadataAPI:Abstract')
@@ -81,6 +82,6 @@ publishing {
 }
 
 buildTools {
-    versions '1.8.8', '1.9', '1.9.4', '1.10.2', '1.11', '1.12.2', '1.13', '1.13.2', '1.14.4', '1.15', '1.16.1', '1.16.2', '1.17'
+    versions '1.8.8', '1.9', '1.9.4', '1.10.2', '1.11', '1.12.2', '1.13', '1.13.2', '1.14.4', '1.15', '1.16.1', '1.16.2', '1.16.5', '1.17'
     workDir = file("work/")
 }
